@@ -1,0 +1,74 @@
+[
+  {
+    "id": "chair",
+    "name": "Jordan Williams",
+    "role": "Chair",
+    "program": "Aerospace Engineering, 4th Year",
+    "bio": "Passionate about spacecraft systems and student leadership. Leading AIAA TMU to new heights.",
+    "linkedin": "https://linkedin.com/in/example",
+    "image": null
+  },
+  {
+    "id": "vice-chair",
+    "name": "Priya Sharma",
+    "role": "Vice Chair",
+    "program": "Mechanical Engineering, 3rd Year",
+    "bio": "Focused on propulsion systems and event coordination. Making aerospace accessible to all students.",
+    "linkedin": "https://linkedin.com/in/example",
+    "image": null
+  },
+  {
+    "id": "treasurer",
+    "name": "Marcus Chen",
+    "role": "Treasurer",
+    "program": "Aerospace Engineering, 4th Year",
+    "bio": "Managing club finances and sponsorship relations. Building sustainable partnerships for the future.",
+    "linkedin": "https://linkedin.com/in/example",
+    "image": null
+  },
+  {
+    "id": "secretary",
+    "name": "Emily Rodriguez",
+    "role": "Secretary",
+    "program": "Computer Engineering, 3rd Year",
+    "bio": "Keeping our operations smooth and documentation on point. Also leading our web development initiatives.",
+    "linkedin": "https://linkedin.com/in/example",
+    "image": null
+  },
+  {
+    "id": "communications",
+    "name": "David Park",
+    "role": "Communications Director",
+    "program": "Aerospace Engineering, 2nd Year",
+    "bio": "Spreading the word about AIAA TMU through social media and outreach. Making aerospace exciting!",
+    "linkedin": "https://linkedin.com/in/example",
+    "image": null
+  },
+  {
+    "id": "events",
+    "name": "Sarah Thompson",
+    "role": "Events Coordinator",
+    "program": "Mechanical Engineering, 3rd Year",
+    "bio": "Planning and executing memorable events that connect students with industry professionals.",
+    "linkedin": "https://linkedin.com/in/example",
+    "image": null
+  },
+  {
+    "id": "technical-lead",
+    "name": "Alex Kim",
+    "role": "Technical Lead",
+    "program": "Aerospace Engineering, 4th Year",
+    "bio": "Leading our design competition team and technical workshops. Turning ideas into reality.",
+    "linkedin": "https://linkedin.com/in/example",
+    "image": null
+  },
+  {
+    "id": "outreach",
+    "name": "Fatima Hassan",
+    "role": "Outreach Coordinator",
+    "program": "Aerospace Engineering, 2nd Year",
+    "bio": "Connecting with high schools and community groups to inspire the next generation of aerospace professionals.",
+    "linkedin": "https://linkedin.com/in/example",
+    "image": null
+  }
+]

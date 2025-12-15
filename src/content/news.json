@@ -1,0 +1,32 @@
+[
+  {
+    "id": "spring-recruitment-2025",
+    "title": "Spring 2025 Executive Recruitment Now Open",
+    "date": "2025-01-05",
+    "excerpt": "We're looking for passionate students to join our executive team. Multiple positions available across communications, events, and technical teams.",
+    "content": "The AIAA TMU Student Branch is excited to announce that applications are now open for our Spring 2025 executive positions. We're seeking motivated individuals who want to make an impact in the aerospace community.\n\nOpen positions include:\n- Communications Director\n- Events Coordinator\n- Technical Project Leads\n- Outreach Coordinator\n\nNo prior experience required—just passion and dedication. Apply by January 20th!",
+    "author": "Executive Team",
+    "tags": ["recruitment", "volunteer", "leadership"],
+    "featured": true
+  },
+  {
+    "id": "design-competition-recap",
+    "title": "AIAA Design Competition 2024 Recap",
+    "date": "2024-12-10",
+    "excerpt": "Our team placed in the top 10 nationally in the AIAA Undergraduate Aircraft Design Competition. Read about our journey and what we learned.",
+    "content": "After months of hard work, our aircraft design team successfully submitted their entry to the AIAA Undergraduate Aircraft Design Competition. The team of 8 students designed an innovative regional electric aircraft concept.\n\nKey achievements:\n- Top 10 placement nationally\n- Innovative hybrid-electric propulsion system\n- Sustainable materials integration\n\nCongratulations to all team members for their dedication and excellent work!",
+    "author": "Technical Team",
+    "tags": ["competition", "design", "success"],
+    "featured": true
+  },
+  {
+    "id": "boeing-partnership",
+    "title": "New Industry Partnership with Boeing Canada",
+    "date": "2024-11-25",
+    "excerpt": "We're thrilled to announce a new partnership with Boeing Canada, bringing more industry talks, mentorship opportunities, and potential internships to our members.",
+    "content": "AIAA TMU is proud to announce our newest industry partnership with Boeing Canada. This collaboration will bring:\n\n- Quarterly industry talks and Q&A sessions\n- Resume reviews and mock interviews\n- Priority access to internship postings\n- Mentorship program with Boeing engineers\n\nThis partnership reflects our commitment to connecting students with real industry opportunities.",
+    "author": "Chair",
+    "tags": ["partnership", "industry", "boeing"],
+    "featured": false
+  }
+]

@@ -101,7 +101,7 @@ function SponsorCard({ sponsor, size = "medium", inline = false }: SponsorCardPr
       href={sponsor.website}
       target="_blank"
       rel="noopener noreferrer"
-      className={`group flex items-center justify-center rounded-xl bg-card border border-border hover:border-accent/30 transition-all duration-300 hover:shadow-card ${sizeClasses[size]}`}
+      className={`group flex items-center justify-center rounded-xl bg-background border border-border hover:border-secondary transition-all duration-300 ${sizeClasses[size]}`}
     >
       {sponsor.logo ? (
         <img

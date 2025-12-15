@@ -8,13 +8,10 @@ interface PageHeaderProps {
 
 export function PageHeader({ title, description, children }: PageHeaderProps) {
   return (
-    <section className="relative py-16 md:py-24 bg-hero-gradient overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute inset-0 bg-glow opacity-50 pointer-events-none" />
-      
+    <section className="relative py-16 md:py-24 bg-muted overflow-hidden">
       <div className="container relative z-10">
         <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 animate-slide-up">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 text-primary animate-slide-up">
             {title}
           </h1>
           {description && (

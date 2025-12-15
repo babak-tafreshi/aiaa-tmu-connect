@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { Menu, X, Rocket, ChevronDown } from "lucide-react";
+import { Menu, X, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import config from "@/content/config.json";
 
@@ -22,9 +22,9 @@ export function Navbar() {
 
   return (
     <>
-      {/* Announcement Banner */}
+      {/* Announcement Banner - Accent Red */}
       {config.announcement.enabled && (
-        <div className="bg-accent-gradient text-accent-foreground text-sm py-2 px-4 text-center">
+        <div className="bg-accent text-accent-foreground text-sm py-2 px-4 text-center">
           <span className="font-medium">{config.announcement.message}</span>
           {config.announcement.link && (
             <Link
@@ -37,17 +37,18 @@ export function Navbar() {
         </div>
       )}
 
-      <nav className="sticky top-0 z-50 glass-strong">
+      {/* Navbar - Primary Blue background */}
+      <nav className="sticky top-0 z-50 bg-primary border-b border-primary/80">
         <div className="container">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 group">
-              <div className="w-10 h-10 rounded-lg bg-accent-gradient flex items-center justify-center shadow-glow group-hover:scale-105 transition-transform">
-                <Rocket className="w-5 h-5 text-accent-foreground" />
+              <div className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center group-hover:bg-primary-foreground/20 transition-colors">
+                <Rocket className="w-5 h-5 text-primary-foreground" />
               </div>
               <div className="flex flex-col">
-                <span className="font-display font-bold text-lg leading-tight">AIAA TMU</span>
-                <span className="text-[10px] text-muted-foreground leading-tight">Student Branch</span>
+                <span className="font-display font-bold text-lg leading-tight text-primary-foreground">AIAA TMU</span>
+                <span className="text-[10px] text-primary-foreground/70 leading-tight">Student Branch</span>
               </div>
             </Link>
 
@@ -56,9 +57,8 @@ export function Navbar() {
               {navLinks.map((link) => (
                 <Link key={link.path} to={link.path}>
                   <Button
-                    variant="nav"
+                    variant={isActive(link.path) ? "nav-active" : "nav"}
                     size="sm"
-                    className={isActive(link.path) ? "text-foreground bg-secondary" : ""}
                   >
                     {link.name}
                   </Button>
@@ -66,10 +66,10 @@ export function Navbar() {
               ))}
             </div>
 
-            {/* CTA Buttons */}
+            {/* CTA Button - Accent Red */}
             <div className="hidden lg:flex items-center gap-3">
               <Link to="/join">
-                <Button variant="hero" size="default">
+                <Button variant="cta" size="default">
                   Join AIAA TMU
                 </Button>
               </Link>
@@ -78,7 +78,7 @@ export function Navbar() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 text-foreground hover:bg-secondary rounded-lg transition-colors"
+              className="lg:hidden p-2 text-primary-foreground hover:bg-primary-foreground/10 rounded-lg transition-colors"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -88,7 +88,7 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden border-t border-border bg-card animate-fade-in">
+          <div className="lg:hidden border-t border-primary-foreground/20 bg-primary animate-fade-in">
             <div className="container py-4 space-y-2">
               {navLinks.map((link) => (
                 <Link
@@ -97,16 +97,16 @@ export function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className={`block px-4 py-3 rounded-lg transition-colors ${
                     isActive(link.path)
-                      ? "bg-secondary text-foreground"
-                      : "text-muted-foreground hover:bg-secondary hover:text-foreground"
+                      ? "bg-secondary/30 text-primary-foreground"
+                      : "text-primary-foreground/80 hover:bg-secondary/20 hover:text-primary-foreground"
                   }`}
                 >
                   {link.name}
                 </Link>
               ))}
-              <div className="pt-4 border-t border-border">
+              <div className="pt-4 border-t border-primary-foreground/20">
                 <Link to="/join" onClick={() => setIsOpen(false)}>
-                  <Button variant="hero" className="w-full">
+                  <Button variant="cta" className="w-full">
                     Join AIAA TMU
                   </Button>
                 </Link>

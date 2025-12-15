@@ -57,21 +57,6 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        navy: {
-          900: "hsl(var(--navy-900))",
-          800: "hsl(var(--navy-800))",
-          700: "hsl(var(--navy-700))",
-        },
-        steel: {
-          600: "hsl(var(--steel-600))",
-          500: "hsl(var(--steel-500))",
-          400: "hsl(var(--steel-400))",
-        },
-        cyan: {
-          600: "hsl(var(--cyan-600))",
-          500: "hsl(var(--cyan-500))",
-          400: "hsl(var(--cyan-400))",
-        },
       },
       borderRadius: {
         lg: "var(--radius)",

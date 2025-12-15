@@ -147,7 +147,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button type="submit" variant="hero" size="lg" disabled={isSubmitting}>
+                  <Button type="submit" variant="cta" size="lg" disabled={isSubmitting}>
                     {isSubmitting ? "Sending..." : "Send Message"}
                     <Send className="w-4 h-4" />
                   </Button>

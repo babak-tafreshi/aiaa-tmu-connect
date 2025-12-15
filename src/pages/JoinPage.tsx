@@ -112,7 +112,7 @@ export default function JoinPage() {
                 </li>
               ))}
             </ul>
-            <Button variant="hero" className="w-full">
+            <Button variant="cta" className="w-full">
               Join Now
               <ArrowRight className="w-4 h-4" />
             </Button>
@@ -202,7 +202,7 @@ export default function JoinPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/contact">
-              <Button variant="hero" size="lg">
+              <Button variant="cta" size="lg">
                 Ask a Question
                 <ArrowRight className="w-5 h-5" />
               </Button>

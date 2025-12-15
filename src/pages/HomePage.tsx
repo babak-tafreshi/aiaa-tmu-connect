@@ -14,8 +14,6 @@ import {
   Rocket, 
   ArrowRight, 
   Mail,
-  Plane,
-  Satellite,
   ChevronRight
 } from "lucide-react";
 import config from "@/content/config.json";
@@ -32,29 +30,7 @@ export default function HomePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-        {/* Background Effects */}
-        <div className="absolute inset-0 bg-hero-gradient" />
-        <div className="absolute inset-0 bg-glow opacity-40" />
-        
-        {/* Grid Pattern */}
-        <div 
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: `linear-gradient(hsl(var(--accent) / 0.3) 1px, transparent 1px),
-                             linear-gradient(90deg, hsl(var(--accent) / 0.3) 1px, transparent 1px)`,
-            backgroundSize: '60px 60px'
-          }}
-        />
-
-        {/* Floating Elements */}
-        <div className="absolute top-20 right-[15%] animate-float">
-          <Satellite className="w-16 h-16 text-accent/20" />
-        </div>
-        <div className="absolute bottom-32 left-[10%] animate-float animation-delay-200">
-          <Plane className="w-12 h-12 text-accent/15 rotate-12" />
-        </div>
-
+      <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-muted">
         <div className="container relative z-10 py-20">
           <div className="max-w-4xl">
             <Badge variant="accent" size="lg" className="mb-6 animate-slide-up">
@@ -62,9 +38,8 @@ export default function HomePage() {
               Toronto Metropolitan University
             </Badge>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 animate-slide-up animation-delay-100">
-              AIAA TMU{" "}
-              <span className="text-gradient">Student Branch</span>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 text-primary animate-slide-up animation-delay-100">
+              AIAA TMU Student Branch
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl animate-slide-up animation-delay-200">
@@ -74,22 +49,19 @@ export default function HomePage() {
 
             <div className="flex flex-wrap gap-4 animate-slide-up animation-delay-300">
               <Link to="/join">
-                <Button variant="hero" size="xl">
+                <Button variant="cta" size="xl">
                   Join AIAA TMU
                   <ArrowRight className="w-5 h-5" />
                 </Button>
               </Link>
               <Link to="/events">
-                <Button variant="hero-outline" size="xl">
+                <Button variant="outline" size="xl">
                   View Events
                 </Button>
               </Link>
             </div>
           </div>
         </div>
-
-        {/* Bottom gradient fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </section>
 
       {/* Stats Section */}
@@ -165,10 +137,10 @@ export default function HomePage() {
           ].map((item, index) => (
             <div
               key={index}
-              className="p-6 rounded-xl bg-card-gradient border border-border hover:border-accent/30 transition-all duration-300 group"
+              className="p-6 rounded-xl bg-card border border-border hover:border-secondary transition-all duration-300 group"
             >
-              <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-                <item.icon className="w-6 h-6 text-accent" />
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <item.icon className="w-6 h-6 text-primary" />
               </div>
               <h3 className="font-display font-semibold text-lg mb-2">{item.title}</h3>
               <p className="text-muted-foreground text-sm">{item.description}</p>
@@ -187,7 +159,7 @@ export default function HomePage() {
             <Link
               key={news.id}
               to={`/news#${news.id}`}
-              className="group block p-6 rounded-xl bg-card-gradient border border-border hover:border-accent/30 transition-all duration-300"
+              className="group block p-6 rounded-xl bg-card border border-border hover:border-secondary transition-all duration-300"
             >
               <div className="flex items-center gap-2 mb-3">
                 <Badge variant="outline" size="sm">
@@ -201,7 +173,7 @@ export default function HomePage() {
                   })}
                 </span>
               </div>
-              <h3 className="font-display font-semibold text-lg mb-2 group-hover:text-accent transition-colors">
+              <h3 className="font-display font-semibold text-lg mb-2 group-hover:text-secondary transition-colors">
                 {news.title}
               </h3>
               <p className="text-muted-foreground text-sm line-clamp-2">{news.excerpt}</p>
@@ -221,7 +193,7 @@ export default function HomePage() {
       {/* Sponsors */}
       <Section dark>
         <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl font-display font-bold mb-3">Our Sponsors</h2>
+          <h2 className="text-2xl md:text-3xl font-display font-bold mb-3 text-primary">Our Sponsors</h2>
           <p className="text-muted-foreground">
             Proudly supported by leading aerospace organizations.
           </p>
@@ -240,10 +212,10 @@ export default function HomePage() {
       {/* Newsletter */}
       <Section>
         <div className="max-w-2xl mx-auto text-center">
-          <div className="w-16 h-16 rounded-2xl bg-accent-gradient flex items-center justify-center mx-auto mb-6">
-            <Mail className="w-8 h-8 text-accent-foreground" />
+          <div className="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center mx-auto mb-6">
+            <Mail className="w-8 h-8 text-primary-foreground" />
           </div>
-          <h2 className="text-3xl font-display font-bold mb-4">Stay in the Loop</h2>
+          <h2 className="text-3xl font-display font-bold mb-4 text-primary">Stay in the Loop</h2>
           <p className="text-muted-foreground mb-8">
             Get the latest updates on events, projects, and opportunities delivered to your inbox.
           </p>
@@ -251,9 +223,9 @@ export default function HomePage() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 h-12 px-4 rounded-lg bg-secondary border border-border focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all"
+              className="flex-1 h-12 px-4 rounded-lg bg-muted border border-border focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary/20 transition-all"
             />
-            <Button variant="hero" className="h-12">
+            <Button variant="cta" className="h-12">
               Subscribe
             </Button>
           </form>
@@ -265,10 +237,9 @@ export default function HomePage() {
 
       {/* CTA */}
       <Section dark>
-        <div className="relative rounded-2xl overflow-hidden">
-          <div className="absolute inset-0 bg-accent-gradient opacity-10" />
+        <div className="relative rounded-2xl overflow-hidden bg-card border border-border">
           <div className="relative p-8 md:p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-primary">
               Ready to Take Off?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
@@ -276,13 +247,13 @@ export default function HomePage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link to="/join">
-                <Button variant="hero" size="lg">
+                <Button variant="cta" size="lg">
                   Join AIAA TMU
                   <ArrowRight className="w-5 h-5" />
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button variant="hero-outline" size="lg">
+                <Button variant="outline" size="lg">
                   Contact Us
                 </Button>
               </Link>

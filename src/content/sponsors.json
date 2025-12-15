@@ -1,0 +1,44 @@
+[
+  {
+    "id": "boeing",
+    "name": "Boeing Canada",
+    "tier": "Title",
+    "logo": null,
+    "website": "https://boeing.ca"
+  },
+  {
+    "id": "mda",
+    "name": "MDA Space",
+    "tier": "Gold",
+    "logo": null,
+    "website": "https://mda.space"
+  },
+  {
+    "id": "bombardier",
+    "name": "Bombardier Aerospace",
+    "tier": "Gold",
+    "logo": null,
+    "website": "https://bombardier.com"
+  },
+  {
+    "id": "pratt-whitney",
+    "name": "Pratt & Whitney Canada",
+    "tier": "Silver",
+    "logo": null,
+    "website": "https://pwc.ca"
+  },
+  {
+    "id": "cae",
+    "name": "CAE Inc.",
+    "tier": "Silver",
+    "logo": null,
+    "website": "https://cae.com"
+  },
+  {
+    "id": "tmu-engineering",
+    "name": "TMU Faculty of Engineering",
+    "tier": "Bronze",
+    "logo": null,
+    "website": "https://torontomu.ca/engineering"
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "siteName": "AIAA TMU",
+  "siteDescription": "AIAA Toronto Metropolitan University Student Branch - Inspiring the next generation of aerospace professionals",
+  "contactEmail": "aiaa.tmu@torontomu.ca",
+  "socialLinks": {
+    "linkedin": "https://linkedin.com/company/aiaa-tmu",
+    "instagram": "https://instagram.com/aiaa_tmu",
+    "twitter": "https://twitter.com/aiaa_tmu"
+  },
+  "announcement": {
+    "enabled": true,
+    "message": "🚀 Spring recruitment is now open! Join our team and help shape the future of aerospace.",
+    "link": "/join",
+    "linkText": "Apply Now"
+  },
+  "stats": {
+    "members": "120+",
+    "eventsPerTerm": "15+",
+    "industryTalks": "8+",
+    "activeProjects": "5"
+  },
+  "membershipInfo": {
+    "studentBranchFee": "Free",
+    "aiaaNationalFee": "$35/year",
+    "benefits": [
+      "Access to all club events and workshops",
+      "Networking with industry professionals",
+      "Hands-on project experience",
+      "Resume and career development support",
+      "Exclusive member-only resources",
+      "Leadership opportunities"
+    ]
+  }
+}

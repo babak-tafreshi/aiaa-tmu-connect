@@ -1,0 +1,50 @@
+[
+  {
+    "id": "design-competition-2025",
+    "title": "AIAA Aircraft Design Competition 2025",
+    "status": "Active",
+    "description": "Designing a next-generation regional transport aircraft for the annual AIAA Undergraduate Design Competition.",
+    "objective": "Create a comprehensive aircraft design proposal addressing fuel efficiency, passenger comfort, and sustainability.",
+    "skills": ["CAD (SolidWorks, CATIA)", "MATLAB/Python", "Aerodynamics", "Structures", "Propulsion"],
+    "teamSize": 12,
+    "openPositions": 4,
+    "timeline": "September 2024 - May 2025",
+    "image": null
+  },
+  {
+    "id": "rocket-team",
+    "title": "High-Power Rocketry Project",
+    "status": "Active",
+    "description": "Building and launching a high-power rocket for the Spaceport America Cup competition.",
+    "objective": "Design, build, and successfully launch a rocket to 10,000 feet with a scientific payload.",
+    "skills": ["Propulsion", "Avionics", "Composites", "Manufacturing", "Project Management"],
+    "teamSize": 15,
+    "openPositions": 6,
+    "timeline": "October 2024 - June 2025",
+    "image": null
+  },
+  {
+    "id": "drone-autonomous",
+    "title": "Autonomous Drone Navigation",
+    "status": "Active",
+    "description": "Developing autonomous navigation capabilities for a custom-built quadcopter.",
+    "objective": "Implement computer vision and path planning algorithms for autonomous flight in GPS-denied environments.",
+    "skills": ["Python", "ROS", "Computer Vision", "Control Systems", "Electronics"],
+    "teamSize": 8,
+    "openPositions": 3,
+    "timeline": "January 2025 - August 2025",
+    "image": null
+  },
+  {
+    "id": "cubesat-2024",
+    "title": "CubeSat Mission Concept",
+    "status": "Completed",
+    "description": "Conceptual design for a 1U CubeSat mission focused on atmospheric research.",
+    "objective": "Develop a complete mission architecture including payload, power, and communications systems.",
+    "skills": ["Systems Engineering", "Space Systems", "MATLAB", "Thermal Analysis"],
+    "teamSize": 10,
+    "openPositions": 0,
+    "timeline": "September 2023 - April 2024",
+    "image": null
+  }
+]

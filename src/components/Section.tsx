@@ -13,14 +13,14 @@ export function Section({ title, subtitle, children, className, dark = false }: 
   return (
     <section className={cn(
       "py-16 md:py-24",
-      dark && "bg-navy-800",
+      dark ? "bg-muted" : "bg-background",
       className
     )}>
       <div className="container">
         {(title || subtitle) && (
           <div className="max-w-2xl mb-12">
             {title && (
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-primary">
                 {title}
               </h2>
             )}

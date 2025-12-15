@@ -73,7 +73,7 @@ export default function ProjectsPage() {
             we want to hear about it. We'll help you build a team and bring it to life.
           </p>
           <Link to="/contact">
-            <Button variant="hero" size="lg">
+            <Button variant="cta" size="lg">
               Propose a Project
               <ArrowRight className="w-5 h-5" />
             </Button>

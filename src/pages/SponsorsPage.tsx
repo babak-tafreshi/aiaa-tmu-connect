@@ -191,7 +191,7 @@ export default function SponsorsPage() {
             Interested in partnering with AIAA TMU? We'd love to discuss how we can work together.
           </p>
           <a href={`mailto:${config.contactEmail}?subject=Sponsorship Inquiry`}>
-            <Button variant="hero" size="lg">
+            <Button variant="cta" size="lg">
               Contact Us
               <ArrowRight className="w-5 h-5" />
             </Button>

@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Calendar, MapPin, Clock, Users, ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 
 interface Event {
   id: string;
@@ -24,8 +23,8 @@ interface EventCardProps {
   variant?: "default" | "featured" | "compact";
 }
 
-const categoryColors: Record<string, string> = {
-  Talk: "accent",
+const categoryColors: Record<string, "accent" | "success" | "warning" | "default" | "primary"> = {
+  Talk: "primary",
   Workshop: "success",
   Tour: "warning",
   Social: "default",
@@ -42,22 +41,22 @@ export function EventCard({ event, variant = "default" }: EventCardProps) {
     return (
       <Link
         to={`/events/${event.id}`}
-        className="group block p-4 rounded-xl bg-card-gradient border border-border hover:border-accent/30 transition-all duration-300 hover:shadow-card"
+        className="group block p-4 rounded-xl bg-card border border-border hover:border-secondary transition-all duration-300"
       >
         <div className="flex items-start gap-4">
-          <div className="flex-shrink-0 w-14 h-14 rounded-lg bg-secondary flex flex-col items-center justify-center">
+          <div className="flex-shrink-0 w-14 h-14 rounded-lg bg-muted flex flex-col items-center justify-center">
             <span className="text-xs text-muted-foreground">
               {new Date(event.date).toLocaleDateString("en-US", { month: "short" })}
             </span>
-            <span className="text-lg font-bold font-display">
+            <span className="text-lg font-bold font-display text-primary">
               {new Date(event.date).getDate()}
             </span>
           </div>
           <div className="flex-1 min-w-0">
-            <Badge variant={categoryColors[event.category] as any || "default"} size="sm" className="mb-2">
+            <Badge variant={categoryColors[event.category] || "default"} size="sm" className="mb-2">
               {event.category}
             </Badge>
-            <h3 className="font-display font-semibold group-hover:text-accent transition-colors truncate">
+            <h3 className="font-display font-semibold group-hover:text-secondary transition-colors truncate">
               {event.title}
             </h3>
             <p className="text-sm text-muted-foreground mt-1">{event.location}</p>
@@ -71,38 +70,37 @@ export function EventCard({ event, variant = "default" }: EventCardProps) {
     return (
       <Link
         to={`/events/${event.id}`}
-        className="group block rounded-2xl bg-card-gradient border border-border hover:border-accent/30 overflow-hidden transition-all duration-300 hover:shadow-elevated"
+        className="group block rounded-2xl bg-card border border-border hover:border-secondary overflow-hidden transition-all duration-300"
       >
-        <div className="aspect-video bg-secondary relative overflow-hidden">
-          <div className="absolute inset-0 bg-glow opacity-30" />
+        <div className="aspect-video bg-muted relative overflow-hidden">
           <div className="absolute top-4 left-4">
-            <Badge variant={categoryColors[event.category] as any || "default"}>
+            <Badge variant={categoryColors[event.category] || "default"}>
               {event.category}
             </Badge>
           </div>
         </div>
         <div className="p-6">
-          <h3 className="text-xl font-display font-bold mb-3 group-hover:text-accent transition-colors">
+          <h3 className="text-xl font-display font-bold mb-3 group-hover:text-secondary transition-colors">
             {event.title}
           </h3>
           <div className="space-y-2 text-sm text-muted-foreground mb-4">
             <div className="flex items-center gap-2">
-              <Calendar className="w-4 h-4" />
+              <Calendar className="w-4 h-4 text-primary" />
               <span>{formattedDate}</span>
             </div>
             <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4" />
+              <Clock className="w-4 h-4 text-primary" />
               <span>{event.time}</span>
             </div>
             <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4" />
+              <MapPin className="w-4 h-4 text-primary" />
               <span>{event.location}</span>
             </div>
           </div>
           <p className="text-muted-foreground text-sm line-clamp-2 mb-4">
             {event.description}
           </p>
-          <div className="flex items-center text-accent font-medium text-sm group-hover:gap-2 transition-all">
+          <div className="flex items-center text-secondary font-medium text-sm group-hover:gap-2 transition-all">
             <span>View Details</span>
             <ArrowRight className="w-4 h-4 ml-1" />
           </div>
@@ -113,14 +111,14 @@ export function EventCard({ event, variant = "default" }: EventCardProps) {
 
   // Default variant
   return (
-    <div className="group rounded-xl bg-card-gradient border border-border hover:border-accent/30 overflow-hidden transition-all duration-300 hover:shadow-card">
+    <div className="group rounded-xl bg-card border border-border hover:border-secondary overflow-hidden transition-all duration-300">
       <div className="p-6">
         <div className="flex items-start justify-between gap-4 mb-4">
           <div>
-            <Badge variant={categoryColors[event.category] as any || "default"} className="mb-3">
+            <Badge variant={categoryColors[event.category] || "default"} className="mb-3">
               {event.category}
             </Badge>
-            <h3 className="text-lg font-display font-semibold group-hover:text-accent transition-colors">
+            <h3 className="text-lg font-display font-semibold group-hover:text-secondary transition-colors">
               {event.title}
             </h3>
           </div>
@@ -131,15 +129,15 @@ export function EventCard({ event, variant = "default" }: EventCardProps) {
         
         <div className="space-y-2 text-sm text-muted-foreground mb-4">
           <div className="flex items-center gap-2">
-            <Calendar className="w-4 h-4 flex-shrink-0" />
+            <Calendar className="w-4 h-4 flex-shrink-0 text-primary" />
             <span>{formattedDate}</span>
           </div>
           <div className="flex items-center gap-2">
-            <Clock className="w-4 h-4 flex-shrink-0" />
+            <Clock className="w-4 h-4 flex-shrink-0 text-primary" />
             <span>{event.time}</span>
           </div>
           <div className="flex items-center gap-2">
-            <MapPin className="w-4 h-4 flex-shrink-0" />
+            <MapPin className="w-4 h-4 flex-shrink-0 text-primary" />
             <span>{event.location}</span>
           </div>
         </div>
@@ -160,7 +158,7 @@ export function EventCard({ event, variant = "default" }: EventCardProps) {
 
         <div className="flex items-center gap-3">
           <Link to={`/events/${event.id}`} className="flex-1">
-            <Button variant="secondary" className="w-full">
+            <Button variant="outline" className="w-full">
               View Details
             </Button>
           </Link>

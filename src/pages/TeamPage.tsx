@@ -112,13 +112,13 @@ export default function TeamPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/join">
-              <Button variant="hero" size="lg">
+              <Button variant="cta" size="lg">
                 Apply Now
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </Link>
             <Link to="/contact">
-              <Button variant="hero-outline" size="lg">
+              <Button variant="outline" size="lg">
                 Contact Us
               </Button>
             </Link>

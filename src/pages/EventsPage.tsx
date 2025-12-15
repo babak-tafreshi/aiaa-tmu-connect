@@ -223,7 +223,7 @@ function EventDetailPage({ event }: EventDetailProps) {
 
               {event.rsvpLink && event.status === "upcoming" && (
                 <a href={event.rsvpLink} target="_blank" rel="noopener noreferrer" className="block">
-                  <Button variant="hero" className="w-full">
+                  <Button variant="cta" className="w-full">
                     RSVP Now
                     <ExternalLink className="w-4 h-4" />
                   </Button>

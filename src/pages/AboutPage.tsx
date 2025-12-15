@@ -224,13 +224,13 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/join">
-              <Button variant="hero" size="lg">
+              <Button variant="cta" size="lg">
                 Become a Member
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </Link>
             <Link to="/team">
-              <Button variant="hero-outline" size="lg">
+              <Button variant="outline" size="lg">
                 Meet the Team
               </Button>
             </Link>

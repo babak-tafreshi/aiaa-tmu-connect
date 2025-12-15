@@ -24,10 +24,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const statusVariant = project.status === "Active" ? "success" : "default";
 
   return (
-    <div className="group rounded-xl bg-card-gradient border border-border hover:border-accent/30 overflow-hidden transition-all duration-300 hover:shadow-card">
+    <div className="group rounded-xl bg-card border border-border hover:border-secondary overflow-hidden transition-all duration-300">
       {/* Image */}
-      <div className="aspect-video bg-secondary relative overflow-hidden">
-        <div className="absolute inset-0 bg-glow opacity-20" />
+      <div className="aspect-video bg-muted relative overflow-hidden">
         <div className="absolute top-4 left-4">
           <Badge variant={statusVariant}>{project.status}</Badge>
         </div>
@@ -40,7 +39,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
       {/* Content */}
       <div className="p-6">
-        <h3 className="text-xl font-display font-bold mb-2 group-hover:text-accent transition-colors">
+        <h3 className="text-xl font-display font-bold mb-2 group-hover:text-secondary transition-colors">
           {project.title}
         </h3>
         <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
@@ -50,11 +49,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
         {/* Meta */}
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
           <div className="flex items-center gap-1">
-            <Users className="w-4 h-4" />
+            <Users className="w-4 h-4 text-primary" />
             <span>{project.teamSize} members</span>
           </div>
           <div className="flex items-center gap-1">
-            <Wrench className="w-4 h-4" />
+            <Wrench className="w-4 h-4 text-primary" />
             <span>{project.skills.length} skills</span>
           </div>
         </div>
@@ -74,7 +73,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         <Link to={`/projects#${project.id}`}>
-          <Button variant="secondary" className="w-full group/btn">
+          <Button variant="outline" className="w-full group/btn">
             <span>Learn More</span>
             <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
           </Button>

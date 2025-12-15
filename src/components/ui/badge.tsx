@@ -8,13 +8,16 @@ const badgeVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-secondary text-secondary-foreground",
-        accent: "bg-accent/10 text-accent border border-accent/20",
+        default: "bg-muted text-foreground border border-border",
+        // Accent Red for important badges (Upcoming, New, Important)
+        accent: "bg-accent text-accent-foreground",
         outline: "border border-border text-muted-foreground",
-        success: "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20",
-        warning: "bg-amber-500/10 text-amber-400 border border-amber-500/20",
+        success: "bg-emerald-100 text-emerald-700 border border-emerald-200",
+        warning: "bg-amber-100 text-amber-700 border border-amber-200",
         destructive: "bg-destructive/10 text-destructive border border-destructive/20",
-        secondary: "border-transparent bg-secondary text-secondary-foreground",
+        secondary: "bg-secondary text-secondary-foreground",
+        // Primary blue badge
+        primary: "bg-primary text-primary-foreground",
       },
       size: {
         default: "px-3 py-1 text-xs",
